@@ -22,7 +22,7 @@ export default function Contact() {
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
               Seu Projeto Merece Engenharia de Verdade.
             </h2>
-            <p className="max-w-[900px] text-foreground/80 md:text-xl/relaxed">
+            <p className="mx-auto max-w-[900px] text-foreground/80 md:text-xl/relaxed">
               Clique no botão abaixo para iniciar uma conversa via WhatsApp. É o primeiro passo para um projeto de sucesso.
             </p>
           </div>
