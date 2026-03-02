@@ -44,9 +44,6 @@ export default function Hero() {
           className="h-auto w-full max-w-4xl"
           priority
         />
-        <p className="mt-6 max-w-3xl text-lg text-foreground/80 md:text-xl">
-          Projetos e reformas conduzidos com método, controle e alto padrão técnico.
-        </p>
         <div className="mt-8">
           <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
             <Link href="#contact">Fale com um Especialista</Link>
