@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Zap } from "lucide-react";
+import { Menu } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const navLinks = [
@@ -56,9 +57,15 @@ export default function Header() {
       }`}
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
-        <Link href="#home" className="flex items-center gap-2 font-headline text-xl font-bold text-primary">
-          <Zap className="h-6 w-6" />
-          <span>Proudcon</span>
+        <Link href="#home" className="flex items-center">
+          <Image
+            src="https://i.postimg.cc/wB9TP8Vw/Chat-GPT-Image-1-de-mar-de-2026-23-27-24.png"
+            alt="Proudcon Engenharia Logo"
+            width={180}
+            height={50}
+            className="h-auto w-36"
+            priority
+          />
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           {navContent}
