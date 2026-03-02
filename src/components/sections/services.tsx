@@ -56,17 +56,12 @@ export default function Services() {
               <CarouselItem key={service.title} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
                 <div className="p-1 h-full">
                   <Card className="bg-background border-border/50 hover:border-primary/50 hover:shadow-lg hover:-translate-y-2 transition-all duration-300 flex flex-col h-full">
-                    <CardHeader className="relative p-6 flex-grow">
-                      <div className="absolute -top-2 -left-2 text-7xl font-bold text-accent/10 select-none z-0">
-                        0{index + 1}
+                    <CardHeader className="p-6 flex-grow flex flex-col items-center text-center">
+                      <div className="p-4 bg-secondary/50 rounded-full inline-block mb-6">
+                        <service.icon className="h-10 w-10 text-primary" />
                       </div>
-                      <div className="relative z-10">
-                        <div className="p-3 bg-secondary/50 rounded-md inline-block mb-4">
-                          <service.icon className="h-8 w-8 text-primary" />
-                        </div>
-                        <CardTitle className="font-headline text-xl mb-2">{service.title}</CardTitle>
-                        <CardDescription className="text-base text-foreground/70">{service.description}</CardDescription>
-                      </div>
+                      <CardTitle className="font-headline text-xl mb-2">{service.title}</CardTitle>
+                      <CardDescription className="text-base text-foreground/70">{service.description}</CardDescription>
                     </CardHeader>
                   </Card>
                 </div>
