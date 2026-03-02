@@ -36,11 +36,14 @@ export default function Hero() {
       )}
       <div className="absolute inset-0 bg-background/70" />
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-primary-foreground p-4">
-        <h1 className="font-headline text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-          Engenharia com Precisão.
-          <br />
-          Execução com Excelência.
-        </h1>
+        <Image
+          src="https://i.postimg.cc/wB9TP8Vw/Chat-GPT-Image-1-de-mar-de-2026-23-27-24.png"
+          alt="Engenharia com Precisão. Execução com Excelência."
+          width={1024}
+          height={281}
+          className="h-auto w-full max-w-4xl"
+          priority
+        />
         <p className="mt-6 max-w-3xl text-lg text-foreground/80 md:text-xl">
           Projetos e reformas conduzidos com método, controle e alto padrão técnico.
         </p>
