@@ -1,0 +1,39 @@
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
+
+export default function Hero() {
+  const heroImage = PlaceHolderImages.find(p => p.id === 'hero-background');
+
+  return (
+    <section id="home" className="relative h-[calc(100vh-5rem)] w-full flex items-center justify-center">
+      {heroImage && (
+        <Image
+          src={heroImage.imageUrl}
+          alt={heroImage.description}
+          fill
+          className="object-cover filter grayscale"
+          priority
+          data-ai-hint={heroImage.imageHint}
+        />
+      )}
+      <div className="absolute inset-0 bg-background/70" />
+      <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-primary-foreground p-4">
+        <h1 className="font-headline text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
+          Engenharia com Precisão.
+          <br />
+          Execução com Excelência.
+        </h1>
+        <p className="mt-6 max-w-3xl text-lg text-foreground/80 md:text-xl">
+          Projetos e reformas conduzidos com método, controle e alto padrão técnico.
+        </p>
+        <div className="mt-8">
+          <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+            <Link href="#contact">Fale com um Especialista</Link>
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+}

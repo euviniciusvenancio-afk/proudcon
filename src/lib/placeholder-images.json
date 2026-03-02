@@ -1,3 +1,70 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "Modern architectural building with clean lines at dusk.",
+      "imageUrl": "https://images.unsplash.com/photo-1559458049-9d62fceeb52b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bW9kZXJuJTIwYXJjaGl0ZWN0dXJlfGVufDB8fHx8MTc3MjM2NDc5NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern architecture"
+    },
+    {
+      "id": "about-image",
+      "description": "Minimalist interior of a modern building showing structural details.",
+      "imageUrl": "https://images.unsplash.com/photo-1527576539890-dfa815648363?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtaW5pbWFsaXN0JTIwYXJjaGl0ZWN0dXJlfGVufDB8fHx8MTc3MjM1MDkzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "minimalist architecture"
+    },
+    {
+      "id": "project-1",
+      "description": "Exterior of a newly constructed modern home.",
+      "imageUrl": "https://images.unsplash.com/photo-1670589953882-b94c9cb380f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBob3VzZXxlbnwwfHx8fDE3NzIzOTk2MDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern house"
+    },
+    {
+      "id": "project-2",
+      "description": "Interior of a high-end apartment renovation.",
+      "imageUrl": "https://images.unsplash.com/photo-1613545325278-f24b0cae1224?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxsdXh1cnklMjBpbnRlcmlvcnxlbnwwfHx8fDE3NzIzMjg3MDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "luxury interior"
+    },
+    {
+      "id": "project-3",
+      "description": "Facade of a commercial building with geometric patterns.",
+      "imageUrl": "https://images.unsplash.com/photo-1567886389617-5a63707fff43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidWlsZGluZyUyMGZhY2FkZXxlbnwwfHx8fDE3NzI0MTYwMTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "building facade"
+    },
+    {
+      "id": "project-4",
+      "description": "Structural engineering work in progress at a construction site.",
+      "imageUrl": "https://images.unsplash.com/photo-1575281923032-f40d94ef6160?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb25zdHJ1Y3Rpb24lMjBzaXRlfGVufDB8fHx8MTc3MjM4MjY1OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "construction site"
+    },
+    {
+      "id": "project-5",
+      "description": "Detailed view of high-quality finishing in a living room.",
+      "imageUrl": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxpbnRlcmlvciUyMGRlc2lnbnxlbnwwfHx8fDE3NzI0MTYwMTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "interior design"
+    },
+    {
+      "id": "project-6",
+      "description": "Landscaping and exterior of a contemporary corporate office.",
+      "imageUrl": "https://images.unsplash.com/photo-1550510537-64a36484eae2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxvZmZpY2UlMjBidWlsZGluZ3xlbnwwfHx8fDE3NzIzNjgwOTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "office building"
+    },
+    {
+      "id": "testimonial-client-1",
+      "description": "Portrait of a male client.",
+      "imageUrl": "https://images.unsplash.com/photo-1636377985931-898218afd306?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NzIzODgxNzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "testimonial-client-2",
+      "description": "Portrait of a female client.",
+      "imageUrl": "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc3MjI5NjAwNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "testimonial-client-3",
+      "description": "Portrait of another male client.",
+      "imageUrl": "https://images.unsplash.com/photo-1562788869-4ed32648eb72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwcm9mZXNzaW9uYWwlMjBtYW58ZW58MHx8fHwxNzcyMzg1MDc0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional man"
+    }
+  ]
 }
