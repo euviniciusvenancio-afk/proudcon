@@ -17,8 +17,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['"PT Sans"', 'sans-serif'],
-        headline: ['"Playfair Display"', 'serif'],
+        body: ['"Nunito Sans"', 'sans-serif'],
+        headline: ['"Nunito Sans"', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
