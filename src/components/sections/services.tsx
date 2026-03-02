@@ -1,30 +1,21 @@
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Building, GanttChartSquare, Landmark, DraftingCompass, Briefcase } from "lucide-react";
-
 const services = [
   {
-    icon: Building,
     title: "Reformas de Alto Padrão",
     description: "Execução completa com controle técnico, cronograma estruturado e relatórios detalhados.",
   },
   {
-    icon: GanttChartSquare,
     title: "Gerenciamento de Obras",
     description: "Planejamento estratégico, acompanhamento técnico e gestão rigorosa de custos.",
   },
   {
-    icon: Landmark,
     title: "Regularização Imobiliária",
     description: "Soluções técnicas e documentais para regularização de imóveis com segurança jurídica.",
   },
   {
-    icon: DraftingCompass,
     title: "Projetos Técnicos e Laudos",
     description: "Projetos estruturais, elétricos e relatórios técnicos com responsabilidade profissional.",
   },
   {
-    icon: Briefcase,
     title: "Consultoria Estratégica",
     description: "Análise técnica especializada para investidores e proprietários.",
   },
@@ -44,34 +35,18 @@ export default function Services() {
             </p>
           </div>
         </div>
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full max-w-6xl mx-auto py-12"
-        >
-          <CarouselContent className="-ml-4">
-            {services.map((service, index) => (
-              <CarouselItem key={service.title} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
-                <div className="p-1 h-full">
-                  <Card className="bg-background border-border/50 hover:border-primary/50 hover:shadow-lg hover:-translate-y-2 transition-all duration-300 flex flex-col h-full">
-                    <CardHeader className="p-6 flex-grow flex flex-col items-center text-center">
-                      <div className="p-4 bg-secondary/50 rounded-full inline-block mb-6">
-                        <service.icon className="h-10 w-10 text-primary" />
-                      </div>
-                      <CardTitle className="font-headline text-xl mb-2">{service.title}</CardTitle>
-                      <CardDescription className="text-base text-foreground/70">{service.description}</CardDescription>
-                    </CardHeader>
-                  </Card>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="absolute left-[-20px] sm:left-[-50px] top-1/2 -translate-y-1/2" />
-          <CarouselNext className="absolute right-[-20px] sm:right-[-50px] top-1/2 -translate-y-1/2" />
-        </Carousel>
-        <div className="text-center mt-8">
+        
+        <div className="mt-16 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+          {services.map((service, index) => (
+            <div key={service.title} className="relative pt-2">
+              <h3 className="font-headline text-2xl font-bold pl-12">{service.title}</h3>
+              <p className="mt-2 text-foreground/80 pl-12">{service.description}</p>
+              <span className="absolute left-0 top-0 font-headline text-5xl font-bold text-primary/20 select-none">{String(index + 1).padStart(2, '0')}</span>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mt-16">
           <p className="text-xl font-medium text-foreground/90 italic tracking-tight">
             "Engenharia não é improviso. É método, cálculo e precisão."
           </p>
