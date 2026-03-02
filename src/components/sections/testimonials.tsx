@@ -1,5 +1,8 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/components/ui/carousel";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
@@ -30,6 +33,23 @@ const testimonials = [
 export default function Testimonials() {
   const testimonialImages = PlaceHolderImages.filter(p => p.id.startsWith('testimonial-client-'));
   
+  const [api, setApi] = useState<CarouselApi>()
+  const [current, setCurrent] = useState(0)
+  const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    if (!api) {
+      return
+    }
+
+    setCount(api.scrollSnapList().length)
+    setCurrent(api.selectedScrollSnap())
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap())
+    })
+  }, [api])
+
   return (
     <section id="testimonials" className="py-16 md:py-24 lg:py-32 bg-background">
       <div className="container mx-auto px-4 md:px-6">
@@ -43,43 +63,57 @@ export default function Testimonials() {
             </p>
           </div>
         </div>
-        <Carousel
-          opts={{
-            align: "start",
-          }}
-          className="w-full max-w-5xl mx-auto mt-12"
-        >
-          <CarouselContent>
-            {testimonials.map((testimonial) => {
-              const image = testimonialImages.find(img => img.id === testimonial.imageId);
-              return (
-                <CarouselItem key={testimonial.id} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-2 h-full">
-                    <Card className="h-full bg-secondary/20 border-border/50 flex flex-col">
-                      <CardContent className="flex flex-col items-start p-6 flex-grow">
-                        <blockquote className="text-foreground/90 text-lg mb-6 flex-grow">
-                          "{testimonial.quote}"
-                        </blockquote>
-                        <div className="flex items-center gap-4">
-                          <Avatar className="h-12 w-12 border-2 border-primary/50">
-                            {image && <AvatarImage src={image.imageUrl} alt={testimonial.name} data-ai-hint={image.imageHint} />}
-                            <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
-                          </Avatar>
-                          <div>
-                            <p className="font-semibold text-primary">{testimonial.name}</p>
-                            <p className="text-sm text-foreground/70">{testimonial.title}</p>
+        <div className="w-full max-w-5xl mx-auto mt-12">
+          <Carousel
+            setApi={setApi}
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent>
+              {testimonials.map((testimonial) => {
+                const image = testimonialImages.find(img => img.id === testimonial.imageId);
+                return (
+                  <CarouselItem key={testimonial.id} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-2 h-full">
+                      <Card className="h-full bg-secondary/20 border-border/50 flex flex-col">
+                        <CardContent className="flex flex-col items-start p-6 flex-grow">
+                          <blockquote className="text-foreground/90 text-lg mb-6 flex-grow">
+                            "{testimonial.quote}"
+                          </blockquote>
+                          <div className="flex items-center gap-4">
+                            <Avatar className="h-12 w-12 border-2 border-primary/50">
+                              {image && <AvatarImage src={image.imageUrl} alt={testimonial.name} data-ai-hint={image.imageHint} />}
+                              <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
+                            </Avatar>
+                            <div>
+                              <p className="font-semibold text-primary">{testimonial.name}</p>
+                              <p className="text-sm text-foreground/70">{testimonial.title}</p>
+                            </div>
                           </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </CarouselItem>
-              );
-            })}
-          </CarouselContent>
-          <CarouselPrevious className="absolute left-[-50px] top-1/2 -translate-y-1/2" />
-          <CarouselNext className="absolute right-[-50px] top-1/2 -translate-y-1/2" />
-        </Carousel>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </CarouselItem>
+                );
+              })}
+            </CarouselContent>
+          </Carousel>
+          <div className="flex justify-center gap-3 mt-8">
+              {Array.from({ length: count }).map((_, i) => (
+                  <button
+                  key={i}
+                  onClick={() => api?.scrollTo(i)}
+                  className={`h-2.5 w-2.5 rounded-full transition-colors ${
+                      current === i ? 'bg-primary' : 'bg-primary/30'
+                  }`}
+                  aria-label={`Go to slide ${i + 1}`}
+                  />
+              ))}
+          </div>
+        </div>
       </div>
     </section>
   );

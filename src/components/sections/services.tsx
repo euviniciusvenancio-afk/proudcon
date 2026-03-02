@@ -1,9 +1,11 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 
 const services = [
@@ -39,6 +41,23 @@ const servicePairs = services.reduce<(typeof services)[]>((result, _value, index
 
 
 export default function Services() {
+  const [api, setApi] = useState<CarouselApi>()
+  const [current, setCurrent] = useState(0)
+  const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    if (!api) {
+      return
+    }
+
+    setCount(api.scrollSnapList().length)
+    setCurrent(api.selectedScrollSnap())
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap())
+    })
+  }, [api])
+
   return (
     <section id="services" className="py-16 md:py-24 lg:py-32 bg-secondary/20">
       <div className="container mx-auto px-4 md:px-6">
@@ -53,45 +72,58 @@ export default function Services() {
           </div>
         </div>
         
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full max-w-4xl mx-auto mt-16"
-        >
-          <CarouselContent>
-            {servicePairs.map((pair, slideIndex) => (
-              <CarouselItem key={slideIndex}>
-                <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 min-h-[350px] px-4">
-                  {/* First item in the pair */}
-                  {pair[0] && (
-                    <div className="relative pt-2 w-full md:w-1/2 md:mb-24">
-                      <h3 className="font-headline text-2xl font-bold pl-12">{pair[0].title}</h3>
-                      <p className="mt-2 text-foreground/80 pl-12">{pair[0].description}</p>
-                      <span className="absolute left-0 top-0 font-headline text-5xl font-bold text-primary/20 select-none">
-                        {String((slideIndex * 2) + 1).padStart(2, '0')}
-                      </span>
-                    </div>
-                  )}
-                  
-                  {/* Second item in the pair */}
-                  {pair[1] && (
-                    <div className="relative pt-2 w-full md:w-1/2 md:mt-24">
-                      <h3 className="font-headline text-2xl font-bold pl-12">{pair[1].title}</h3>
-                      <p className="mt-2 text-foreground/80 pl-12">{pair[1].description}</p>
-                      <span className="absolute left-0 top-0 font-headline text-5xl font-bold text-primary/20 select-none">
-                        {String((slideIndex * 2) + 2).padStart(2, '0')}
-                      </span>
-                    </div>
-                  )}
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="absolute left-0 md:left-[-50px] top-1/2 -translate-y-1/2" />
-          <CarouselNext className="absolute right-0 md:right-[-50px] top-1/2 -translate-y-1/2" />
-        </Carousel>
+        <div className="w-full max-w-4xl mx-auto mt-16">
+          <Carousel
+            setApi={setApi}
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent>
+              {servicePairs.map((pair, slideIndex) => (
+                <CarouselItem key={slideIndex}>
+                  <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 min-h-[350px] px-4">
+                    {/* First item in the pair */}
+                    {pair[0] && (
+                      <div className="relative pt-2 w-full md:w-1/2 md:mb-24">
+                        <h3 className="font-headline text-2xl font-bold pl-12">{pair[0].title}</h3>
+                        <p className="mt-2 text-foreground/80 pl-12">{pair[0].description}</p>
+                        <span className="absolute left-0 top-0 font-headline text-5xl font-bold text-primary/20 select-none">
+                          {String((slideIndex * 2) + 1).padStart(2, '0')}
+                        </span>
+                      </div>
+                    )}
+                    
+                    {/* Second item in the pair */}
+                    {pair[1] && (
+                      <div className="relative pt-2 w-full md:w-1/2 md:mt-24">
+                        <h3 className="font-headline text-2xl font-bold pl-12">{pair[1].title}</h3>
+                        <p className="mt-2 text-foreground/80 pl-12">{pair[1].description}</p>
+                        <span className="absolute left-0 top-0 font-headline text-5xl font-bold text-primary/20 select-none">
+                          {String((slideIndex * 2) + 2).padStart(2, '0')}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+          <div className="flex justify-center gap-3 mt-8">
+              {Array.from({ length: count }).map((_, i) => (
+                  <button
+                  key={i}
+                  onClick={() => api?.scrollTo(i)}
+                  className={`h-2.5 w-2.5 rounded-full transition-colors ${
+                      current === i ? 'bg-primary' : 'bg-primary/30'
+                  }`}
+                  aria-label={`Go to slide ${i + 1}`}
+                  />
+              ))}
+          </div>
+        </div>
 
         <div className="text-center mt-16">
           <p className="text-xl font-medium text-foreground/90 italic tracking-tight">
