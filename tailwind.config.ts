@@ -17,8 +17,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['"Nunito Sans"', 'sans-serif'],
-        headline: ['"Nunito Sans"', 'sans-serif'],
+        body: ['"Lato"', 'sans-serif'],
+        headline: ['"Cinzel"', 'serif'],
         code: ['monospace'],
       },
       colors: {
