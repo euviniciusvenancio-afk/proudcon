@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "Modern architectural building with clean lines at dusk.",
-      "imageUrl": "https://images.unsplash.com/photo-1559458049-9d62fceeb52b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bW9kZXJuJTIwYXJjaGl0ZWN0dXJlfGVufDB8fHx8MTc3MjM2NDc5NHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "modern architecture"
+      "description": "Engineer overseeing a construction project.",
+      "imageUrl": "https://i.postimg.cc/QxWLJ4pC/Quero-que-deixe-a-foto-na-mesma-proporo-da-paisage-delpmaspu.jpg",
+      "imageHint": "engineering project"
     },
     {
       "id": "about-image",
