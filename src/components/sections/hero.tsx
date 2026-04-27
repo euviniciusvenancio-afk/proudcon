@@ -46,7 +46,7 @@ export default function Hero() {
         />
         <div className="mt-8">
           <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-            <Link href="#contact">Solicitar orçamento</Link>
+            <Link href="https://wa.me/553291258227" target="_blank" rel="noopener noreferrer">Solicitar orçamento</Link>
           </Button>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Contact() {
   return (
@@ -15,8 +16,10 @@ export default function Contact() {
           </div>
         </div>
         <div className="mt-12 text-center">
-           <Button size="lg">
-              Fazer orçamento
+           <Button size="lg" asChild>
+              <Link href="https://wa.me/553291258227" target="_blank" rel="noopener noreferrer">
+                Fazer orçamento
+              </Link>
           </Button>
         </div>
       </div>
