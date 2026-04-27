@@ -14,7 +14,7 @@ export default function About() {
               <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                 Sobre a Proudcon
               </h2>
-              <p className="max-w-[600px] text-foreground/80 md:text-lg/relaxed">
+              <p className="max-w-[600px] text-foreground/80 md:text-lg/relaxed font-headline">
                 Somos referência em engenharia e execução técnica, comprometidos com a organização, planejamento e controle rigoroso de cada obra. Garantimos entregas no prazo e total transparência, estabelecendo uma relação de confiança com cada cliente.
               </p>
             </div>

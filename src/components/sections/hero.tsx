@@ -46,7 +46,7 @@ export default function Hero() {
         />
         <div className="mt-8">
           <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-            <Link href="#contact">Fale com um Especialista</Link>
+            <Link href="#contact">Solicitar orçamento</Link>
           </Button>
         </div>
       </div>
