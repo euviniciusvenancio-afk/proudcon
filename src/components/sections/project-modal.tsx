@@ -28,23 +28,24 @@ export function ProjectModal({ images, isOpen, onClose }: ProjectModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="w-full max-w-5xl bg-card/95 backdrop-blur-sm border-border/50 p-2 sm:p-4 rounded-lg shadow-2xl">
+      <DialogContent className="w-[95vw] max-w-6xl bg-transparent p-0 border-none shadow-none">
         <DialogTitle className="sr-only">Galeria de Imagens do Projeto</DialogTitle>
         <Carousel
           className="w-full"
           opts={{
-            loop: true,
+            loop: images.length > 1,
           }}
         >
           <CarouselContent>
             {images.map((src, index) => (
               <CarouselItem key={index}>
-                <div className="relative aspect-video w-full overflow-hidden rounded-md">
+                <div className="relative aspect-video w-full overflow-hidden">
                   <Image
                     src={src}
                     alt={`Imagem do projeto ${index + 1}`}
                     fill
                     className="object-contain"
+                    sizes="(max-width: 768px) 95vw, 70vw"
                   />
                 </div>
               </CarouselItem>
@@ -52,8 +53,8 @@ export function ProjectModal({ images, isOpen, onClose }: ProjectModalProps) {
           </CarouselContent>
           {images.length > 1 && (
             <>
-              <CarouselPrevious className="absolute left-1 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full bg-black/30 text-white hover:bg-black/50 border-none transition-colors sm:left-2" />
-              <CarouselNext className="absolute right-1 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full bg-black/30 text-white hover:bg-black/50 border-none transition-colors sm:right-2" />
+              <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 z-10 h-10 w-10 border-none bg-transparent text-white opacity-70 transition-opacity hover:opacity-100 disabled:opacity-0 md:left-[-60px]" />
+              <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 z-10 h-10 w-10 border-none bg-transparent text-white opacity-70 transition-opacity hover:opacity-100 disabled:opacity-0 md:right-[-60px]" />
             </>
           )}
         </Carousel>

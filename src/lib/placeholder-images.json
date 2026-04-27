@@ -2,7 +2,7 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "Engineer overseeing a construction project.",
+      "description": "Engenharia com Precisão. Execução com Excelência.",
       "imageUrl": "https://i.postimg.cc/QxWLJ4pC/Quero-que-deixe-a-foto-na-mesma-proporo-da-paisage-delpmaspu.jpg",
       "imageHint": "engineering project"
     },
@@ -35,6 +35,20 @@
         "https://i.postimg.cc/DmVhh8Gx/IMG-5027.avif",
         "https://i.postimg.cc/kDrCCBSf/IMG-5028.avif",
         "https://i.postimg.cc/w3Kzz7Nk/IMG-5037.avif"
+      ]
+    },
+    {
+      "id": "project-3",
+      "description": "Living Room Renovation",
+      "imageUrl": "https://i.postimg.cc/Prhp1x9z/20240123-200525.jpg",
+      "imageHint": "living room renovation",
+      "gallery": [
+        "https://i.postimg.cc/Prhp1x9z/20240123-200525.jpg",
+        "https://i.postimg.cc/4NZ7pdqc/20240123-191418.jpg",
+        "https://i.postimg.cc/SNq2cs36/20240123-191500.jpg",
+        "https://i.postimg.cc/yYBg0dt9/20240123-200409.jpg",
+        "https://i.postimg.cc/hPgzVj60/20240123-200657.jpg",
+        "https://i.postimg.cc/xTYJLChg/20240123-200821.jpg"
       ]
     },
     {
