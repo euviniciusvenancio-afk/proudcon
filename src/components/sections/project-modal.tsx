@@ -1,8 +1,10 @@
+
 "use client";
 
 import {
   Dialog,
   DialogContent,
+  DialogTitle,
 } from "@/components/ui/dialog";
 import {
   Carousel,
@@ -27,6 +29,7 @@ export function ProjectModal({ images, isOpen, onClose }: ProjectModalProps) {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="bg-transparent border-none shadow-none p-0 w-full max-w-6xl">
+        <DialogTitle className="sr-only">Galeria de Imagens do Projeto</DialogTitle>
         <Carousel
           className="w-full"
           opts={{
@@ -39,7 +42,7 @@ export function ProjectModal({ images, isOpen, onClose }: ProjectModalProps) {
                 <div className="relative aspect-video w-full">
                   <Image
                     src={src}
-                    alt={`Project image ${index + 1}`}
+                    alt={`Imagem do projeto ${index + 1}`}
                     fill
                     className="object-contain"
                   />
