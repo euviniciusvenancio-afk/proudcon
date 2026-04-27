@@ -1,18 +1,36 @@
+
 "use client";
 
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export default function Testimonials() {
   const testimonialImages = PlaceHolderImages.filter(p => p.id.startsWith('testimonial-ss-'));
+  
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
 
   if (!testimonialImages.length) {
     return null;
@@ -33,6 +51,7 @@ export default function Testimonials() {
         </div>
         <div className="w-full max-w-6xl mx-auto mt-16">
           <Carousel
+            setApi={setApi}
             opts={{
               align: "start",
               loop: testimonialImages.length > 2,
@@ -58,9 +77,19 @@ export default function Testimonials() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="absolute left-[-10px] md:left-[-50px] top-1/2 -translate-y-1/2 z-10 h-10 w-10 border-none bg-transparent text-white/70 transition-opacity hover:text-white disabled:opacity-0" />
-            <CarouselNext className="absolute right-[-10px] md:right-[-50px] top-1/2 -translate-y-1/2 z-10 h-10 w-10 border-none bg-transparent text-white/70 transition-opacity hover:text-white disabled:opacity-0" />
           </Carousel>
+           <div className="flex justify-center gap-3 mt-8">
+              {Array.from({ length: count }).map((_, i) => (
+                  <button
+                  key={i}
+                  onClick={() => api?.scrollTo(i)}
+                  className={`h-2 w-2 rounded-full transition-colors ${
+                      current === i ? 'bg-primary' : 'bg-primary/30'
+                  }`}
+                  aria-label={`Go to slide ${i + 1}`}
+                  />
+              ))}
+          </div>
         </div>
       </div>
     </section>

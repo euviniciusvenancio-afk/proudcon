@@ -1,18 +1,36 @@
 
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import { PlaceHolderImages, type ImagePlaceholder } from "@/lib/placeholder-images";
 import { ProjectModal } from "./project-modal";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/components/ui/carousel";
 
 export default function Projects() {
   const projectImages = PlaceHolderImages.filter(p => p.id.startsWith('project-'));
 
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedImages, setSelectedImages] = useState<string[]>([]);
+  
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
 
   const openModal = (images: string[]) => {
     setSelectedImages(images);
@@ -51,7 +69,7 @@ export default function Projects() {
                 Projetos Executados
               </h2>
               <p className="max-w-[900px] text-foreground/80 md:text-xl/relaxed">
-                Explore uma seleção de nossos trabalhos, onde a precisão técnica encontra o design sofisticado.
+                Clique para ver os projetos
               </p>
             </div>
           </div>
@@ -66,6 +84,7 @@ export default function Projects() {
           {/* Desktop: Carousel */}
           <div className="hidden md:block mt-16">
             <Carousel
+              setApi={setApi}
               opts={{
                 align: "start",
                 loop: projectImages.length > 2,
@@ -79,9 +98,19 @@ export default function Projects() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="absolute left-[-60px] top-1/2 -translate-y-1/2 z-10 h-12 w-12 rounded-full bg-card/70 text-primary hover:bg-card border-2 border-primary/40 transition-all disabled:opacity-0" />
-              <CarouselNext className="absolute right-[-60px] top-1/2 -translate-y-1/2 z-10 h-12 w-12 rounded-full bg-card/70 text-primary hover:bg-card border-2 border-primary/40 transition-all disabled:opacity-0" />
             </Carousel>
+            <div className="flex justify-center gap-3 mt-8">
+                {Array.from({ length: count }).map((_, i) => (
+                    <button
+                    key={i}
+                    onClick={() => api?.scrollTo(i)}
+                    className={`h-2 w-2 rounded-full transition-colors ${
+                        current === i ? 'bg-primary' : 'bg-primary/30'
+                    }`}
+                    aria-label={`Go to slide ${i + 1}`}
+                    />
+                ))}
+            </div>
           </div>
         </div>
       </section>
