@@ -25,47 +25,16 @@
     },
     {
       "id": "project-2",
-      "description": "Interior of a high-end apartment renovation.",
-      "imageUrl": "https://images.unsplash.com/photo-1613545325278-f24b0cae1224?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxsdXh1cnklMjBpbnRlcmlvcnxlbnwwfHx8fDE3NzIzMjg3MDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "luxury interior",
+      "description": "Apartment Renovation 2",
+      "imageUrl": "https://i.postimg.cc/zBc5ddGD/IMG-5009.avif",
+      "imageHint": "modern apartment",
       "gallery": [
-        "https://images.unsplash.com/photo-1613545325278-f24b0cae1224?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxsdXh1cnklMjBpbnRlcmlvcnxlbnwwfHx8fDE3NzIzMjg3MDF8MA&ixlib=rb-4.1.0&q=80&w=1080"
-      ]
-    },
-    {
-      "id": "project-3",
-      "description": "Facade of a commercial building with geometric patterns.",
-      "imageUrl": "https://images.unsplash.com/photo-1567886389617-5a63707fff43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidWlsZGluZyUyMGZhY2FkZXxlbnwwfHx8fDE3NzI0MTYwMTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "building facade",
-      "gallery": [
-        "https://images.unsplash.com/photo-1567886389617-5a63707fff43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidWlsZGluZyUyMGZhY2FkZXxlbnwwfHx8fDE3NzI0MTYwMTh8MA&ixlib=rb-4.1.0&q=80&w=1080"
-      ]
-    },
-    {
-      "id": "project-4",
-      "description": "Structural engineering work in progress at a construction site.",
-      "imageUrl": "https://images.unsplash.com/photo-1575281923032-f40d94ef6160?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb25zdHJ1Y3Rpb24lMjBzaXRlfGVufDB8fHx8MTc3MjM4MjY1OHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "construction site",
-      "gallery": [
-        "https://images.unsplash.com/photo-1575281923032-f40d94ef6160?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb25zdHJ1Y3Rpb24lMjBzaXRlfGVufDB8fHx8MTc3MjM4MjY1OHww&ixlib=rb-4.1.0&q=80&w=1080"
-      ]
-    },
-    {
-      "id": "project-5",
-      "description": "Detailed view of high-quality finishing in a living room.",
-      "imageUrl": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxpbnRlcmlvciUyMGRlc2lnbnxlbnwwfHx8fDE3NzI0MTYwMTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "interior design",
-      "gallery": [
-        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxpbnRlcmlvciUyMGRlc2lnbnxlbnwwfHx8fDE3NzI0MTYwMTd8MA&ixlib=rb-4.1.0&q=80&w=1080"
-      ]
-    },
-    {
-      "id": "project-6",
-      "description": "Landscaping and exterior of a contemporary corporate office.",
-      "imageUrl": "https://images.unsplash.com/photo-1550510537-64a36484eae2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxvZmZpY2UlMjBidWlsZGluZ3xlbnwwfHx8fDE3NzIzNjgwOTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "office building",
-      "gallery": [
-        "https://images.unsplash.com/photo-1550510537-64a36484eae2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxvZmZpY2UlMjBidWlsZGluZ3xlbnwwfHx8fDE3NzIzNjgwOTh8MA&ixlib=rb-4.1.0&q=80&w=1080"
+        "https://i.postimg.cc/C1QYvvxF/antes.avif",
+        "https://i.postimg.cc/LXbRyy8m/IMG-5008.avif",
+        "https://i.postimg.cc/k4p9jjgJ/IMG-5021.avif",
+        "https://i.postimg.cc/DmVhh8Gx/IMG-5027.avif",
+        "https://i.postimg.cc/kDrCCBSf/IMG-5028.avif",
+        "https://i.postimg.cc/w3Kzz7Nk/IMG-5037.avif"
       ]
     },
     {
