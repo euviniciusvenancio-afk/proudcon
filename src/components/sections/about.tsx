@@ -30,7 +30,7 @@ export default function About() {
                   src={aboutImage.imageUrl}
                   alt={aboutImage.description}
                   fill
-                  className="object-cover filter grayscale"
+                  className="object-cover"
                   data-ai-hint={aboutImage.imageHint}
                 />
             )}
