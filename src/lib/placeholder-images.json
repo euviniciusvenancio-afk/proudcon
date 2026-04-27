@@ -92,22 +92,46 @@
       ]
     },
     {
-      "id": "testimonial-client-1",
-      "description": "Portrait of a male client.",
-      "imageUrl": "https://images.unsplash.com/photo-1636377985931-898218afd306?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NzIzODgxNzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "man portrait"
+      "id": "testimonial-ss-1",
+      "description": "Depoimento de cliente 1",
+      "imageUrl": "https://i.postimg.cc/RVSHthn0/b58d3510-6dc1-451b-b1ea-cf71b4f30d16.jpg",
+      "imageHint": "client testimonial"
     },
     {
-      "id": "testimonial-client-2",
-      "description": "Portrait of a female client.",
-      "imageUrl": "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8fDE3NzIyOTYwMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "woman portrait"
+      "id": "testimonial-ss-2",
+      "description": "Depoimento de cliente 2",
+      "imageUrl": "https://i.postimg.cc/HsYyMn7s/291f6d32-c228-427c-b9f5-c84f88d7f688.jpg",
+      "imageHint": "client testimonial"
     },
     {
-      "id": "testimonial-client-3",
-      "description": "Portrait of another male client.",
-      "imageUrl": "https://images.unsplash.com/photo-1562788869-4ed32648eb72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwcm9mZXNzaW9uYWwlMjBtYW58ZW58MHx8fHwxNzcyMzg1MDc0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "professional man"
+      "id": "testimonial-ss-3",
+      "description": "Depoimento de cliente 3",
+      "imageUrl": "https://i.postimg.cc/tCqx6JV4/438ed06b-7796-4b51-8a67-8b0cf784052c.jpg",
+      "imageHint": "client testimonial"
+    },
+    {
+      "id": "testimonial-ss-4",
+      "description": "Depoimento de cliente 4",
+      "imageUrl": "https://i.postimg.cc/hPDdmv7f/4db86571-8a9d-4109-ae05-12eee2d92559.jpg",
+      "imageHint": "client testimonial"
+    },
+    {
+      "id": "testimonial-ss-5",
+      "description": "Depoimento de cliente 5",
+      "imageUrl": "https://i.postimg.cc/TYdDb1W2/746c6a55-889a-4df7-8f3d-431769cb61db.jpg",
+      "imageHint": "client testimonial"
+    },
+    {
+      "id": "testimonial-ss-6",
+      "description": "Depoimento de cliente 6",
+      "imageUrl": "https://i.postimg.cc/WbNkZzJN/b14ba1ec-afcd-4188-8b6a-5d421081b8cd.jpg",
+      "imageHint": "client testimonial"
+    },
+    {
+      "id": "testimonial-ss-7",
+      "description": "Depoimento de cliente 7",
+      "imageUrl": "https://i.postimg.cc/jdx7f2J5/c587d957-e53c-43d2-a31a-8db4165458b4.jpg",
+      "imageHint": "client testimonial"
     }
   ]
 }
