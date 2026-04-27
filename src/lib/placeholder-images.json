@@ -80,6 +80,18 @@
       ]
     },
     {
+      "id": "project-6",
+      "description": "Project 6",
+      "imageUrl": "https://i.postimg.cc/xT694Tx7/IMG-5251.jpg",
+      "imageHint": "interior renovation",
+      "gallery": [
+        "https://i.postimg.cc/xT694Tx7/IMG-5251.jpg",
+        "https://i.postimg.cc/3J8K1D17/IMG-5258.jpg",
+        "https://i.postimg.cc/vHYQh6hF/IMG-5270.jpg",
+        "https://i.postimg.cc/J4r1xBxw/IMG-5272.jpg"
+      ]
+    },
+    {
       "id": "testimonial-client-1",
       "description": "Portrait of a male client.",
       "imageUrl": "https://images.unsplash.com/photo-1636377985931-898218afd306?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NzIzODgxNzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
