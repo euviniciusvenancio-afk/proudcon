@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -12,7 +11,7 @@ export default function About() {
         <div className="grid gap-12 md:grid-cols-2 md:gap-16 lg:gap-24 items-center">
           <div className="space-y-6">
             <div className="space-y-3">
-              <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                 Sobre a Proudcon
               </h2>
               <p className="max-w-[600px] text-foreground/80 md:text-lg/relaxed font-body">
@@ -25,7 +24,7 @@ export default function About() {
               </blockquote>
             </Card>
           </div>
-          <div className="relative h-80 w-full md:h-[500px] rounded-lg overflow-hidden">
+          <div className="relative h-80 w-full md:h-[500px] rounded-lg overflow-hidden shadow-2xl">
             {aboutImage && (
                 <Image
                   src={aboutImage.imageUrl}

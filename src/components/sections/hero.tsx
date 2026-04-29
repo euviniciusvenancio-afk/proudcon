@@ -43,10 +43,11 @@ export default function Hero() {
           height={281}
           className="h-auto w-full max-w-4xl"
           priority
+          unoptimized
         />
         <div className="mt-8">
-          <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-            <Link href="https://wa.me/553291258227" target="_blank" rel="noopener noreferrer">Solicitar orçamento</Link>
+          <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold">
+            <Link href="https://wa.me/553291258227" target="_blank" rel="noopener noreferrer">Fazer orçamento</Link>
           </Button>
         </div>
       </div>

@@ -42,7 +42,7 @@ export default function Header() {
           key={link.href}
           href={link.href}
           onClick={handleLinkClick}
-          className="text-sm font-medium transition-colors hover:text-primary text-foreground/80 hover:text-foreground"
+          className="text-sm font-medium transition-colors hover:text-primary text-foreground/80"
         >
           {link.label}
         </Link>
@@ -65,6 +65,7 @@ export default function Header() {
             height={50}
             className="h-auto w-36"
             priority
+            unoptimized
           />
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
@@ -72,7 +73,7 @@ export default function Header() {
         </nav>
         <div className="flex items-center gap-4">
           <Button asChild className="hidden sm:flex bg-primary text-primary-foreground hover:bg-primary/90">
-            <Link href="https://wa.me/553291258227" target="_blank" rel="noopener noreferrer">Solicitar Avaliação</Link>
+            <Link href="https://wa.me/553291258227" target="_blank" rel="noopener noreferrer">Fazer orçamento</Link>
           </Button>
           {isMounted && (
             <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>

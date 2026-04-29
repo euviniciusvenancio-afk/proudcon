@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -63,7 +64,7 @@ export default function Services() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
               Soluções Completas em Engenharia
             </h2>
             <p className="max-w-[900px] text-foreground/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -88,9 +89,9 @@ export default function Services() {
                     {/* First item in the pair */}
                     {pair[0] && (
                       <div className="relative pt-2 w-full md:w-1/2 md:mb-24">
-                        <h3 className="font-headline text-2xl font-bold pl-12 text-white">{pair[0].title}</h3>
+                        <h3 className="text-2xl font-bold pl-12 text-white">{pair[0].title}</h3>
                         <p className="mt-2 text-foreground/80 pl-12">{pair[0].description}</p>
-                        <span className="absolute left-0 top-0 font-headline text-5xl font-bold text-primary/20 select-none">
+                        <span className="absolute left-0 top-0 text-5xl font-bold text-primary/20 select-none">
                           {String((slideIndex * 2) + 1).padStart(2, '0')}
                         </span>
                       </div>
@@ -99,9 +100,9 @@ export default function Services() {
                     {/* Second item in the pair */}
                     {pair[1] && (
                       <div className="relative pt-2 w-full md:w-1/2 md:mt-24">
-                        <h3 className="font-headline text-2xl font-bold pl-12 text-white">{pair[1].title}</h3>
+                        <h3 className="text-2xl font-bold pl-12 text-white">{pair[1].title}</h3>
                         <p className="mt-2 text-foreground/80 pl-12">{pair[1].description}</p>
-                        <span className="absolute left-0 top-0 font-headline text-5xl font-bold text-primary/20 select-none">
+                        <span className="absolute left-0 top-0 text-5xl font-bold text-primary/20 select-none">
                           {String((slideIndex * 2) + 2).padStart(2, '0')}
                         </span>
                       </div>

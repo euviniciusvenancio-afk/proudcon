@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -41,7 +40,7 @@ export default function Testimonials() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
               A Opinião de Nossos Clientes
             </h2>
             <p className="max-w-[900px] text-foreground/80 md:text-xl/relaxed">
@@ -60,16 +59,16 @@ export default function Testimonials() {
           >
             <CarouselContent className="-ml-4">
               {testimonialImages.map((image) => (
-                <CarouselItem key={image.id} className="pl-4 basis-full md:basis-1/2 lg:basis-[36%]">
+                <CarouselItem key={image.id} className="pl-4 basis-full md:basis-1/2 lg:basis-1/3">
                   <div className="p-1 h-full">
-                    <Card className="overflow-hidden bg-secondary/10 border-border/30 h-full flex flex-col shadow-lg">
-                      <div className="relative aspect-[9/18] bg-[#111] flex-grow">
+                    <Card className="overflow-hidden bg-[#111] border-border/30 h-full flex flex-col shadow-lg">
+                      <div className="relative aspect-[9/16] w-full flex-grow">
                         <Image
                           src={image.imageUrl}
                           alt={image.description}
                           fill
-                          className="object-contain rounded-lg p-2 md:p-3"
-                          sizes="(max-width: 768px) 85vw, (max-width: 1200px) 45vw, 33vw"
+                          className="object-contain p-2"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
                       </div>
                     </Card>
