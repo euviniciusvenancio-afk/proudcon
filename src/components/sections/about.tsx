@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -11,15 +12,15 @@ export default function About() {
         <div className="grid gap-12 md:grid-cols-2 md:gap-16 lg:gap-24 items-center">
           <div className="space-y-6">
             <div className="space-y-3">
-              <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+              <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
                 Sobre a Proudcon
               </h2>
-              <p className="max-w-[600px] text-foreground/80 md:text-lg/relaxed font-headline">
+              <p className="max-w-[600px] text-foreground/80 md:text-lg/relaxed font-body">
                 Somos referência em engenharia e execução técnica, comprometidos com a organização, planejamento e controle rigoroso de cada obra. Garantimos entregas no prazo e total transparência, estabelecendo uma relação de confiança com cada cliente.
               </p>
             </div>
             <Card className="bg-card p-6 border-border/50">
-              <blockquote className="text-lg font-semibold leading-snug text-foreground">
+              <blockquote className="text-lg font-semibold leading-snug text-foreground font-body">
                 “Fundada e liderada por Jovane Venâncio, engenheiro civil com visão estratégica e foco absoluto em qualidade e previsibilidade.”
               </blockquote>
             </Card>

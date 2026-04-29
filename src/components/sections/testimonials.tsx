@@ -41,7 +41,7 @@ export default function Testimonials() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
               A Opinião de Nossos Clientes
             </h2>
             <p className="max-w-[900px] text-foreground/80 md:text-xl/relaxed">
@@ -62,8 +62,8 @@ export default function Testimonials() {
               {testimonialImages.map((image) => (
                 <CarouselItem key={image.id} className="pl-4 basis-full md:basis-1/2 lg:basis-[36%]">
                   <div className="p-1 h-full">
-                    <Card className="overflow-hidden bg-secondary/20 border-border/50 h-full flex flex-col shadow-lg">
-                      <div className="relative aspect-[9/18] bg-background/30 flex-grow">
+                    <Card className="overflow-hidden bg-secondary/10 border-border/30 h-full flex flex-col shadow-lg">
+                      <div className="relative aspect-[9/18] bg-[#111] flex-grow">
                         <Image
                           src={image.imageUrl}
                           alt={image.description}
@@ -86,7 +86,7 @@ export default function Testimonials() {
                   className={`h-2 w-2 rounded-full transition-colors ${
                       current === i ? 'bg-primary' : 'bg-primary/30'
                   }`}
-                  aria-label={`Go to slide ${i + 1}`}
+                  aria-label={`Ir para o slide ${i + 1}`}
                   />
               ))}
           </div>
