@@ -20,7 +20,7 @@ export default function About() {
             </div>
             <Card className="bg-card p-6 border-border/50">
               <blockquote className="text-lg font-semibold leading-snug text-foreground">
-                “Fundada e liderada por Jovane Venâncio, engenheiro com visão estratégica e foco absoluto em qualidade e previsibilidade.”
+                “Fundada e liderada por Jovane Venâncio, engenheiro civil com visão estratégica e foco absoluto em qualidade e previsibilidade.”
               </blockquote>
             </Card>
           </div>
