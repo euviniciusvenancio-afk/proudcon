@@ -29,7 +29,6 @@
       "imageUrl": "https://i.postimg.cc/zBc5ddGD/IMG-5009.avif",
       "imageHint": "modern apartment",
       "gallery": [
-        "https://i.postimg.cc/C1QYvvxF/antes.avif",
         "https://i.postimg.cc/LXbRyy8m/IMG-5008.avif",
         "https://i.postimg.cc/k4p9jjgJ/IMG-5021.avif",
         "https://i.postimg.cc/DmVhh8Gx/IMG-5027.avif",
@@ -49,19 +48,6 @@
         "https://i.postimg.cc/yYBg0dt9/20240123-200409.jpg",
         "https://i.postimg.cc/hPgzVj60/20240123-200657.jpg",
         "https://i.postimg.cc/xTYJLChg/20240123-200821.jpg"
-      ]
-    },
-    {
-      "id": "project-4",
-      "description": "Project 4",
-      "imageUrl": "https://i.postimg.cc/4d7Lvw7s/20240514-153322.jpg",
-      "imageHint": "interior design",
-      "gallery": [
-        "https://i.postimg.cc/4d7Lvw7s/20240514-153322.jpg",
-        "https://i.postimg.cc/V6rG94rw/20240514-152614.jpg",
-        "https://i.postimg.cc/W3FWmSFs/20240514-152635.jpg",
-        "https://i.postimg.cc/JnD63KDm/20240514-153244.jpg",
-        "https://i.postimg.cc/V6rG94rf/20240514-153720.jpg"
       ]
     },
     {
