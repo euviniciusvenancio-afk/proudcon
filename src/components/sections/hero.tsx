@@ -45,7 +45,8 @@ export default function Hero() {
           priority
           unoptimized
         />
-        <div className="mt-8">
+        {/* Oculta este botão apenas no Desktop (md:hidden) */}
+        <div className="mt-8 md:hidden">
           <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold">
             <Link href="https://wa.me/553291258227" target="_blank" rel="noopener noreferrer">Fazer orçamento</Link>
           </Button>
