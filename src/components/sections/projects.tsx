@@ -105,7 +105,7 @@ export default function Projects() {
                     key={i}
                     onClick={() => api?.scrollTo(i)}
                     className={`h-2 w-2 rounded-full transition-colors ${
-                        current === i ? 'bg-primary' : 'bg-primary/30'
+                        current === i ? 'bg-white' : 'bg-white/30'
                     }`}
                     aria-label={`Ir para o slide ${i + 1}`}
                     />

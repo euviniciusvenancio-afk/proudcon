@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -40,7 +41,7 @@ export default function Testimonials() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
               A Opinião de Nossos Clientes
             </h2>
             <p className="max-w-[900px] text-foreground/80 md:text-xl/relaxed">
@@ -69,6 +70,7 @@ export default function Testimonials() {
                           fill
                           className="object-contain p-2"
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          unoptimized
                         />
                       </div>
                     </Card>
@@ -83,7 +85,7 @@ export default function Testimonials() {
                   key={i}
                   onClick={() => api?.scrollTo(i)}
                   className={`h-2 w-2 rounded-full transition-colors ${
-                      current === i ? 'bg-primary' : 'bg-primary/30'
+                      current === i ? 'bg-white' : 'bg-white/30'
                   }`}
                   aria-label={`Ir para o slide ${i + 1}`}
                   />
