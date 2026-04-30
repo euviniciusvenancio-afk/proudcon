@@ -126,12 +126,6 @@
       "description": "Depoimento de cliente 6",
       "imageUrl": "https://i.postimg.cc/DZ99f9b4/Captura-de-tela-2026-04-29-190937.png",
       "imageHint": "client testimonial"
-    },
-    {
-      "id": "testimonial-ss-7",
-      "description": "Depoimento de cliente 7",
-      "imageUrl": "https://i.postimg.cc/Pxggfg88/Captura-de-tela-2026-04-29-194351.png",
-      "imageHint": "client testimonial"
     }
   ]
 }
