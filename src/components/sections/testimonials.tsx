@@ -41,10 +41,10 @@ export default function Testimonials() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white font-headline">
               A Opinião de Nossos Clientes
             </h2>
-            <p className="max-w-[900px] text-foreground/80 md:text-xl/relaxed">
+            <p className="max-w-[900px] text-foreground/80 md:text-xl/relaxed font-body">
               A satisfação de quem confia em nosso trabalho é nossa maior recompensa.
             </p>
           </div>
@@ -84,7 +84,7 @@ export default function Testimonials() {
                   <button
                   key={i}
                   onClick={() => api?.scrollTo(i)}
-                  className={`h-2 w-2 rounded-full transition-colors ${
+                  className={`h-2.5 w-2.5 rounded-full transition-colors ${
                       current === i ? 'bg-white' : 'bg-white/30'
                   }`}
                   aria-label={`Ir para o slide ${i + 1}`}
